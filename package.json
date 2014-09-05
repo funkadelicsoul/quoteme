@@ -1,0 +1,27 @@
+{
+  "name": "quoteme",
+  "version": "1.0",
+  "description": "Extract pieces of copy and add them as blockquotes to your page",
+  "main": "jquery.quoteme.js",
+  "dependencies": {
+    "gulp": "^3.8.7"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://funkadelicsoul@github.com/funkadelicsoul/quoteme.git"
+  },
+  "keywords": [
+    "jquery",
+    "blockquotes"
+  ],
+  "author": "Mat Frankum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funkadelicsoul/quoteme/issues"
+  },
+  "homepage": "https://github.com/funkadelicsoul/quoteme"
+}
