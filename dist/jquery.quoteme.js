@@ -1,6 +1,6 @@
 /**
  * quoteme - Extract pieces of copy and add them as blockquotes to your page
- * @version v1.0.0
+ * @version v0.0.1
  * @link https://github.com/funkadelicsoul/quoteme
  * @license MIT
  */
