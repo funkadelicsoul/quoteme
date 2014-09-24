@@ -11,6 +11,11 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+    blockquote { margin-bottom: 20px; }
+    blockquote p { font-size: 1.15em; margin: 0; }
+    blockquote footer:before { content: "- "; } 
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -28,10 +33,6 @@
         </ul>
       </header>
       <section>
-        <h1>
-<a name="quoteme" class="anchor" href="#quoteme"><span class="octicon octicon-link"></span></a>quoteme</h1>
-
-<p>Extract pieces of copy and add them as blockquotes to your page. </p>
 
 <p>A class of <code>.quoteme__select</code> to select text for use as a quote. </p>
 
@@ -54,6 +55,72 @@
 <h2>
 <a name="demos" class="anchor" href="#demos"><span class="octicon octicon-link"></span></a>Demos</h2>
 
+<p>Pommy ipsum the dog's dinner supper a total jessie Bob's your uncle, gob by 'eck love a fiver blighty, gallivanting around black pudding posh nosh mince pies. <span class="quoteme__select">Sweets mush challenge you to a duel fish fingers and custard</span> gobsmacked and thus jolly good yorkshire mixture stiff upper lip, cor blimey' for sooth Bob's your uncle wibbly-wobbly timey-wimey stuff on his bill got his end away bloody shambles. Ear hole <span class="quoteme__select" data-quoteme-citation="By {{[Penfold](http://en.wikipedia.org/wiki/Danger_Mouse_(TV_series))}}">Victoria sponge cake knows bugger all about nowt bull dog ask your mother</span> if you 'avin a laugh double dutch hadn't done it in donkey's years, atrocious Bob's your uncle blummin' ended up brown bread baffled done up like a kipper. Tosser one feels that bow ties are cool bull dog crumpets on the beat, yorkshire mixture spiffing scones golly gosh Union Jack, the chippy pigeons in Trafalgar Square cornish pasty atrocious.</p>
+
+<p><a href="#example1" class="toggle">Toggle Code</a></p>
+
+<pre id="example1" style="display:none;"><code>1. Basic Usage
+2. Using citation data attribute for subject and url
+
+&lt;p&gt;
+...
+&lt;span class="quoteme__select"&gt;Sweets mush challenge you to a duel fish fingers and custard&lt;/span&gt;
+...
+&lt;span class="quoteme__select" data-quoteme-citation="By {{[Penfold](http://en.wikipedia.org/wiki/Danger_Mouse_(TV_series))}}"&gt;Victoria sponge cake knows bugger all about nowt bull dog ask your mother&lt;/span&gt;
+...
+&lt;/p&gt;</code></pre>
+
+<hr />
+
+<p>Absolute twoddle bow ties are cool scrumpy on his tod what a mug they can sod off cheesed off made a pig's ear of it the dog's dinner gobsmacked, what a load of cobblers eton mess wibbly-wobbly timey-wimey stuff fork out grab a jumper rambunctious porky-pies pillock trouble and strife cup of tea, bog roll punter have a bash nose rag <span class="quoteme__select" data-quoteme-citation="By {{Colonel K}}, 2014">flabbergasted Essex girls brown sauce a right royal knees up.</span> Brown sauce accordingly Shakespeare yorkshire mixture gutted odds and sods ey up duck I could reet fancy a pillock, scrumpy give you a bell sorted it Doctor Who farewell smeg brilliant. On't goggle box darling her Majesty's pleasure Prince Charles porky-pies on the pull Moriarty, brilliant nicked shortbread bloke.</p>
+
+<p><a href="#example2" class="toggle">Toggle Code</a></p>
+
+<pre id="example2" style="display:none;"><code>
+1. Using citation data attribute for subject within text
+
+&lt;p&gt;
+...
+&lt;span class="quoteme__select" data-quoteme-citation="By {{Colonel K}}, 2014"&gt;flabbergasted Essex girls brown sauce a right royal knees up.&lt;/span&gt;
+...
+&lt;/p&gt;</code></pre>
+
+<hr />
+
+<p>Chin up willy devonshire cream tea Weeping Angels grub's up <span class="quoteme__select" data-quoteme-citation="Barron Greenback">it's the dogs <span class="quoteme__drop">bollocks</span> yorkshire pudding</span>, Shakespeare horses for courses every fortnight big light. Black cab 'tis a bottle of plonk gallivanting around driving a mini bits 'n bobs for sooth fried toast, every fortnight a diamond geezer bobby narky argy-bargy by 'eck love, chips nigh marmite lost her marbles odds and sods naff off. Curry sauce and we all like figgy pudding pie-eyed, middle class.</p>
+
+<p><a href="#example3" class="toggle">Toggle Code</a></p>
+
+<pre id="example3" style="display:none;"><code>
+1. Basic citation data attribute usage with deletion (drop) of selected text.
+
+&lt;p&gt;
+...
+&lt;span class="quoteme__select" data-quoteme-citation="Barron Greenback"&gt;it's the dogs &lt;span class="quoteme__drop"&gt;bollocks&lt;/span&gt; yorkshire pudding&lt;/span&gt;
+...
+&lt;/p&gt;</code></pre>
+
+<hr />
+
+<blockquote id="quote1"></blockquote>
+
+<p>Scatterbrained pillock anorak darling conked him one on the nose, and we all like figgy pudding the fuzz half-inch it conked him one on the nose I'm off to Bedfordshire, squiffy driving a mini it's the dogs bollocks. Squirrel off with her head big light bag egg's old boy slappers jolly good down the village green, and we all like figgy pudding bloody mary scrubber I'm off to Bedfordshire manky, ever so up North alright geezer fork out it's nicked. <span class="quoteme__select" data-quoteme-citation="{{[Danger Mouse](http://en.wikipedia.org/wiki/Danger_Mouse_(TV_series))}}, London 2014" data-quoteme-block-id="quote1">Absolute alright duck get away with ya have a gander grab a jumper, <span class="quoteme__drop">bog off</span> daft cow flog any road</span>, best be off Geordie, in the goolies brown sauce cheerio. Pork dripping rubbish collywobbles jolly wellies bovver boots nonsense doolally tad it's nicked put me soaps back on taking the mick, scrote 10 pence mix ey up duck cotton on it's spitting on his tod don't get your knickers in a twist real ale anorak. </p>
+
+<p><a href="#example4" class="toggle">Toggle Code</a></p>
+
+<pre id="example4" style="display:none;"><code>
+1. Place quote within identified placeholder where required in page using block-id data attribute.
+
+&lt;blockquote id="quote1"&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;
+...
+&lt;span class="quoteme__select" data-quoteme-citation="{{[Danger Mouse](http://en.wikipedia.org/wiki/Danger_Mouse_(TV_series))}}, London 2014" data-quoteme-block-id="quote1"&gt;Absolute alright duck get away with ya have a gander grab a jumper, &lt;span class="quoteme__drop"&gt;bog off&lt;/span&gt; daft cow flog any road&lt;/span&gt;
+...
+&lt;/p&gt;</code></pre>
+
+<p><small>Lorem Ipsum by <a href="http://www.pommyipsum.com/">Pommy Ipsum</a></small></p>
+
       </section>
       <footer class="footer">
         <p>This project is maintained by <a href="https://github.com/funkadelicsoul">funkadelicsoul</a></p>
@@ -63,5 +130,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/jquery.quoteme.min.js"></script>
+    <script>
+    $('body').quoteme()
+
+    $('.toggle').on('click', function(e) {
+        e.preventDefault()
+
+        $(this.getAttribute('href')).toggle()
+    })
+</script>
   </body>
 </html>
