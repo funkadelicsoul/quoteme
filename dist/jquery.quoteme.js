@@ -1,3 +1,9 @@
+/**
+ * quoteme - Extract pieces of copy and add them as blockquotes to your page
+ * @version v1.0.0
+ * @link https://github.com/funkadelicsoul/quoteme
+ * @license MIT
+ */
 ;(function($) {
 	'use strict'
 function QuoteMe(regex) {
