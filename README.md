@@ -12,7 +12,11 @@ By default quotes are added directly after the quote's parent wrapper, usually a
 
 ## Usage
 
-`$('body').quoteme({options})`
+`$('body').quoteme()`
+
+## Demos
+
+http://funkadelicsoul.com/quoteme/
 
 ## Config
 
