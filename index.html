@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Quoteme by funkadelicsoul</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Quoteme</h1>
+        <p>Extract pieces of copy and add them as blockquotes to your page</p>
+
+        <p class="view"><a href="https://github.com/funkadelicsoul/quoteme">View the Project on GitHub <small>funkadelicsoul/quoteme</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/funkadelicsoul/quoteme/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/funkadelicsoul/quoteme/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/funkadelicsoul/quoteme">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="quoteme" class="anchor" href="#quoteme"><span class="octicon octicon-link"></span></a>quoteme</h1>
+
+<p>Extract pieces of copy and add them as blockquotes to your page. </p>
+
+<p>A class of <code>.quoteme__select</code> to select text for use as a quote. </p>
+
+<p>A child element with a class of <code>.quoteme__drop</code> to remove parts of the text from  the rendered blockquote, this gets replaced with: [...]</p>
+
+<p>A <code>data</code> attribute is used to provide citation information.</p>
+
+<p>By default quotes are added directly after the quote's parent wrapper, usually a <code>&lt;p/&gt;</code>.  A <code>data</code> attribute can be used to place the quote inside a blockquote placeholder with a corresponding ID anywhere on the page you decide to place it.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><code>$('body').quoteme({options})</code></p>
+
+<h2>
+<a name="config" class="anchor" href="#config"><span class="octicon octicon-link"></span></a>Config</h2>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<h4>
+<a name="quotewrapper" class="anchor" href="#quotewrapper"><span class="octicon octicon-link"></span></a>quoteWrapper</h4>
+
+<p>Type: <code>String</code>
+Default: <code>p</code></p>
+
+<p>Element wrapper that contains the content that will be quoted. In 99% of situations this will be a <code>&lt;p/&gt;</code> element.</p>
+
+<h4>
+<a name="citationregex" class="anchor" href="#citationregex"><span class="octicon octicon-link"></span></a>citationRegex</h4>
+
+<p>Type: <code>Regular Expression</code>
+Default: <code>/{{(.*?)(\[(.*?)\])?(\((.*?)\))?}}/</code></p>
+
+<p>The regular expression used to identify a quote's citation if added using the <code>data-quoteme-citation</code> attribute. The format follows the same format as a Markdown link.</p>
+
+<p>Braces can be used to find the citation subject and/or reference url from within extra information. </p>
+
+<pre><code>data-quoteme-citation="Just subject"
+data-quoteme-citation="{{[Just Subject]}}"
+data-quoteme-citation="{{[Subject](url)}}"
+data-quoteme-citation="{{[Subject](url)}}"
+data-quoteme-citation="{{(just_url)}}"
+data-quoteme-citation="By {{[Subject](url)}}, 2014"
+</code></pre>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<h3>
+<a name="basic" class="anchor" href="#basic"><span class="octicon octicon-link"></span></a>Basic</h3>
+
+<p>Search all <code>p</code> elements in the <code>body</code> and extract the quoted content.</p>
+
+<pre><code>$('body').quoteme();
+</code></pre>
+
+<h3>
+<a name="use-different-quotewrapper" class="anchor" href="#use-different-quotewrapper"><span class="octicon octicon-link"></span></a>Use different quoteWrapper</h3>
+
+<p>Search all <code>span</code> elements in the <code>.speech</code> class and extract the quoted content.</p>
+
+<pre><code>$('.speech').quoteme({
+    quoteWrapper: 'span'
+})
+</code></pre>
+
+<h3>
+<a name="change-regular-expression" class="anchor" href="#change-regular-expression"><span class="octicon octicon-link"></span></a>Change Regular Expression</h3>
+
+<p>Change format of citation template to: <code>{[subject]&lt;url&gt;}</code></p>
+
+<pre><code>$('.speech').quoteme({
+    citationRegex: /{(.*?)(\[(.*?)\])?(\&lt;(.*?)\&gt;)?}/
+})
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/funkadelicsoul">funkadelicsoul</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
